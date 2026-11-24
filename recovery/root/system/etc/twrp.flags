@@ -47,6 +47,9 @@
 /persist               	ext4    /dev/block/bootdevice/by-name/persist                              flags=display="Persist"
 /persist_image         	emmc    /dev/block/bootdevice/by-name/persist                              flags=display="Persist";flashimg=1;wipeingui=1
 
+# userdata
+/userdata_default             emmc           /dev/block/bootdevice/by-name/userdata                     flags=display="Userdata default";flashimg;backup=1;wipeingui
+
 # Firmware partitions
 /bluetooth             	vfat    /dev/block/bootdevice/by-name/bluetooth                            flags=display="bluetooth";slotselect;fsflags="ro,shortname=lower,uid=1002,gid=3002,dmask=227,fmask=337,context=u:object_r:bt_firmware_file:s0 wait"
 /bluetooth_image       	emmc    /dev/block/bootdevice/by-name/bluetooth                            flags=backup=1;display="bluetooth";slotselect;backup=1;flashimg=1;wipeingui=1
